@@ -1,0 +1,68 @@
+@use "colours.scss" as *;
+
+.container {
+  background: $jet;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.name {
+  font-size: 5rem;
+  text-align: center;
+  flex: 3;
+}
+
+.rightSide {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+}
+
+.projects {
+  width: 18rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  height: 50vh;
+  padding: 1rem 2rem;
+
+  > h2 {
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 0.75em;
+    border-bottom: 1px solid white;
+  }
+
+  > ul {
+    padding-inline: 0;
+    margin-block: 0;
+
+    li::marker {
+      content: "˃";
+    }
+
+    li > a {
+      color: $blue;
+      text-decoration: none;
+      margin-left: 0.5em;
+    }
+
+    li > a:hover {
+      text-decoration: underline;
+    }
+
+    // hide all but the first 8 projects
+    li:nth-of-type(1n + 9) {
+      display: none;
+    }
+
+    > li:not(:last-child) {
+      margin-bottom: 0.5em;
+    }
+  }
+}
