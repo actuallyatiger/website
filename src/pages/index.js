@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import * as React from "react";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import SEOHead from "../components/seo";
 import * as styles from "../styles/index.module.scss";
 
 const IndexPage = () => {
@@ -47,4 +47,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <SEO />;
+export const Head = () => <SEOHead />;
