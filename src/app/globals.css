@@ -1,3 +1,2 @@
-@import "tailwindcss"; /* Main Tailwind import */
+@import "tailwindcss";
 
-/* Tailwind now handles all color theming directly through its configuration */
