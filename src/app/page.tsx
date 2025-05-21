@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="flex-grow">
       {/* Hero Section */}
-      <section className="py-20 px-6 flex justify-center items-center">
+      <section className="py-10 md:py-15 px-6 flex justify-center items-center">
         <div className="bg-gradient-to-br from-blue-500 to-blue-400 text-white text-center py-10 px-12 rounded-xl shadow-lg max-w-2xl">
           <h1 className="text-4xl font-extrabold mb-4">Hi, I&apos;m Tiger</h1>
           <p className="text-lg">
@@ -19,7 +19,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-6 bg-blue-50">
+      <section id="about" className="py-10 md:py-15 px-6 bg-blue-50">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold mb-2">About Me</h2>
@@ -108,7 +108,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6 bg-white">
+      <section id="projects" className="py-10 md:py-15 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold mb-2">Projects</h2>
@@ -145,7 +145,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6 bg-gradient-to-b from-blue-50 to-white">
+      <section id="contact" className="py-10 md:py-15 px-6 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-2">Contact Me</h2>
@@ -157,9 +157,9 @@ export default function Home() {
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-100 rounded-full -ml-10 -mb-10"></div>
 
             <div className="relative">
-              <p className="text-gray-700 mb-8 text-center md:text-lg">
+              {/* <p className="text-gray-700 mb-8 text-center md:text-lg">
                 Have a project in mind? Let&apos;s collaborate and make something awesome together.
-              </p>
+              </p> */}
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center p-4">
