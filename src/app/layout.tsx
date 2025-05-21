@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import Navigation from "../components/Navigation";
+import ScrollToTop from "../components/ScrollToTop";
 import icon from "./icon.svg";
 
 const interFont = Inter({
@@ -33,6 +34,8 @@ export default function RootLayout({
             <p className="text-gray-600">&copy; {new Date().getFullYear()} Tiger Taylor</p>
           </div>
         </footer>
+
+        <ScrollToTop />
       </body>
     </html>
   );
