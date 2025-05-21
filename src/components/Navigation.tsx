@@ -16,6 +16,29 @@ export default function Navigation({ logoSrc }: NavigationProps) {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleNavLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+
+    // Close mobile menu if open
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+
+    // Get the target element
+    const targetSection = document.getElementById(sectionId);
+
+    if (targetSection) {
+      // Scroll to the section smoothly
+      targetSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+
+      // Update URL without page reload
+      window.history.pushState(null, "", `#${sectionId}`);
+    }
+  };
+
   return (
     <>
       <nav className="flex justify-between items-center max-w-6xl mx-auto">
@@ -27,17 +50,17 @@ export default function Navigation({ logoSrc }: NavigationProps) {
         {/* Desktop Menu */}
         <ul className="hidden sm:flex space-x-6">
           <li>
-            <a href="#about" className="hover:underline">
+            <a href="#about" className="hover:underline" onClick={(e) => handleNavLinkClick(e, "about")}>
               About
             </a>
           </li>
           <li>
-            <a href="#projects" className="hover:underline">
+            <a href="#projects" className="hover:underline" onClick={(e) => handleNavLinkClick(e, "projects")}>
               Projects
             </a>
           </li>
           <li>
-            <a href="#contact" className="hover:underline">
+            <a href="#contact" className="hover:underline" onClick={(e) => handleNavLinkClick(e, "contact")}>
               Contact
             </a>
           </li>
@@ -59,7 +82,11 @@ export default function Navigation({ logoSrc }: NavigationProps) {
       >
         <ul className="flex flex-col space-y-3 py-2">
           <li className={`${isMenuOpen ? "menu-item-enter menu-item-enter-active" : ""} delay-75`}>
-            <a href="#about" className="block px-2 py-1 hover:bg-gray-100 rounded" onClick={() => setIsMenuOpen(false)}>
+            <a
+              href="#about"
+              className="block px-2 py-1 hover:bg-gray-100 rounded"
+              onClick={(e) => handleNavLinkClick(e, "about")}
+            >
               About
             </a>
           </li>
@@ -67,7 +94,7 @@ export default function Navigation({ logoSrc }: NavigationProps) {
             <a
               href="#projects"
               className="block px-2 py-1 hover:bg-gray-100 rounded"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => handleNavLinkClick(e, "projects")}
             >
               Projects
             </a>
@@ -76,7 +103,7 @@ export default function Navigation({ logoSrc }: NavigationProps) {
             <a
               href="#contact"
               className="block px-2 py-1 hover:bg-gray-100 rounded"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => handleNavLinkClick(e, "contact")}
             >
               Contact
             </a>
