@@ -31,75 +31,69 @@ export default function Home() {
               systems, full-stack development, and networks.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Course Modules */}
-              <div>
-                <h3 className="text-xl font-bold mb-4 text-blue-800 pb-2 border-b border-blue-100">
-                  Course Module Highlights
-                </h3>
-                <ul className="space-y-3">
-                  <DetailedBullet
-                    title="Computer Networks"
-                    description="OSI, TCP/IP, subnets, local & global routing, virtualization"
-                  />
-                  <DetailedBullet
-                    title="Digital Systems"
-                    description="Logic gates, CPU architecture, assembly, context switching, IO"
-                  />
-                  <DetailedBullet
-                    title="Computer Security"
-                    description="Hashing, (a)symmetric encryption, digital signatures, authentication, attacks"
-                  />
-                  <DetailedBullet
-                    title="Databases"
-                    description="SQL, B+ trees, transactions, parallelisation, ACID properties, indexing"
-                  />
-                  <DetailedBullet
-                    title="Artificial Intelligence"
-                    description="Search algorithms, robots, minimax, alpha-beta pruning"
-                  />
-                  <DetailedBullet
-                    title="Compilers"
-                    description="Lexical analysis, parsing, semantic analysis, code generation, optimization"
-                  />
-                </ul>
-              </div>
+            {/* Course Modules - Full width, 2 columns on all screens */}
+            <div className="mb-8">
+              <h3 className="text-xl font-bold mb-4 text-blue-800 pb-2 border-b border-blue-100">
+                Course Module Highlights
+              </h3>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
+                <DetailedBullet
+                  title="Computer Networks"
+                  description="OSI, TCP/IP, subnets, STP, local & global routing, virtualization"
+                />
+                <DetailedBullet
+                  title="Artificial Intelligence"
+                  description="Tree and graph search algorithms, A*, robots, minimax, alpha-beta pruning"
+                />
+                <DetailedBullet
+                  title="Digital Systems"
+                  description="Logic gates, CPU architecture, assembly, context switching, IO"
+                />
+                <DetailedBullet
+                  title="Computer Security"
+                  description="Hashing, (a)symmetric encryption, digital signatures, authentication, attacks"
+                />
+                <DetailedBullet
+                  title="Databases"
+                  description="SQL, B+ trees, transactions, parallelisation, ACID properties, indexing"
+                />
+                <DetailedBullet
+                  title="Compilers"
+                  description="Lexical analysis, parsing, semantic analysis, code generation, optimization, context-free grammars"
+                />
+                <DetailedBullet
+                  title="Algorithms & Data Structures"
+                  description="Amortised analysis, binary search trees, graphs, linear programming, NP-completeness"
+                />
+              </ul>
+            </div>
 
-              {/* Skills */}
-              <div>
-                <h3 className="text-xl font-bold mb-4 text-blue-800 pb-2 border-b border-blue-100">Technical Skills</h3>
-                <div className="space-y-6">
-                  <div className="bg-blue-50 p-5 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 mb-3">Languages</h4>
-                    <div className="flex flex-wrap gap-2">
-                      <Item name="Python" />
-                      <Item name="JavaScript" />
-                      <Item name="TypeScript" />
-                      <Item name="C/C++" />
-                      <Item name="Rust" />
-                      <Item name="Scala" />
-                      <Item name="Haskell" />
-                    </div>
+            {/* Skills - Languages and Tools side by side */}
+            <div>
+              <h3 className="text-xl font-bold mb-4 text-blue-800 pb-2 border-b border-blue-100">Technical Skills</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-blue-50 p-5 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-3">Languages</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <Item name="Python" />
+                    <Item name="JavaScript" />
+                    <Item name="TypeScript" />
+                    <Item name="C/C++" />
+                    <Item name="Rust" />
+                    <Item name="Scala" />
+                    <Item name="Haskell" />
                   </div>
+                </div>
 
-                  <div className="bg-blue-50 p-5 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 mb-3">Tools & Frameworks</h4>
-                    <div className="flex flex-wrap gap-2">
-                      <Item name="Bash" />
-                      <Item name="Git" />
-                      <Item name="Docker" />
-                      <Item name="Flask" />
-                      <Item name="Next.js" />
-                    </div>
+                <div className="bg-blue-50 p-5 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-3">Tools & Frameworks</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <Item name="Bash" />
+                    <Item name="Git" />
+                    <Item name="Docker" />
+                    <Item name="Flask" />
+                    <Item name="Next.js" />
                   </div>
-                  {/* <div className="bg-blue-50 p-5 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 mb-3">Currently Learning</h4>
-                    <div className="flex flex-wrap gap-2">
-                      <Item name="PostgreSQL" />
-                      <Item name="MongoDB" />
-                      <Item name="Redis" />
-                    </div>
-                  </div> */}
                 </div>
               </div>
             </div>
@@ -117,28 +111,23 @@ export default function Home() {
 
           <div className="flex flex-wrap justify-center gap-8">
             <Card
-              title="Personal Website"
-              description="My portfolio website built with Next.js and TailwindCSS"
-              technologies={["Next.js", "TypeScript", "Tailwind"]}
-              githubUrl="https://github.com/username/website"
+              title="KeySafe"
+              description="Password manager built with AES-encryption, Argon2 hashing, and a serverless architecture."
+              technologies={["Next.js", "Flask", "Google Cloud"]}
+              githubUrl="https://github.com/actuallyatiger/keysafe"
+              projectUrl="https://keysafe.tigertaylor.xyz"
             />
             <Card
-              title="Task Manager"
-              description="A full-stack task management application with authentication and real-time updates"
-              technologies={["React", "Node.js", "MongoDB"]}
-              githubUrl="https://github.com/username/task-manager"
+              title="Beat Bot"
+              description="Discord music bot with YouTube integration, slash commands, and a custom queue interface."
+              technologies={["Discord.js", "YouTube API", "Google Cloud"]}
+              githubUrl="https://github.com/actuallyatiger/discord-beat-bot"
             />
             <Card
-              title="Algorithm Visualizer"
-              description="Interactive visualization of common algorithms like sorting and pathfinding"
-              technologies={["JavaScript", "Canvas API", "CSS"]}
-              githubUrl="https://github.com/username/algorithm-viz"
-            />
-            <Card
-              title="Chat Application"
-              description="Real-time messaging app with end-to-end encryption and group chat support"
-              technologies={["React", "Firebase", "WebSockets"]}
-              githubUrl="https://github.com/username/chat-app"
+              title="Frost Compiler"
+              description="(WIP) Statically typed, compiled language with Rust-style syntax and functional programming-inspired features.\nIncludes a custom DFA lexer and LR(1) parser."
+              technologies={["Rust", "LLVM"]}
+              githubUrl="https://github.com/actuallyatiger/frost"
             />
           </div>
         </div>
