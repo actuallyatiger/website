@@ -1,4 +1,4 @@
-import { DetailedBullet } from "@/components/DetailedBullet";
+import { CourseHighlights } from "@/components/CourseHighlights";
 import { Item } from "@/components/Item";
 import { Card } from "@/components/Card";
 import { FaEnvelope, FaLinkedin, FaPhone } from "react-icons/fa";
@@ -32,49 +32,7 @@ export default function Home() {
             </p>
 
             {/* Course Modules - Full width, 2 columns on all screens */}
-            <div className="mb-8">
-              <h3 className="text-xl font-bold mb-4 text-blue-800 pb-2 border-b border-blue-100">
-                Course Module Highlights
-              </h3>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
-                <DetailedBullet
-                  title="Computer Networks"
-                  description="OSI, TCP/IP, subnets, STP, local & global routing, virtualization"
-                />
-                <DetailedBullet
-                  title="Artificial Intelligence"
-                  description="Tree and graph search algorithms, A*, robots, minimax, alpha-beta pruning"
-                />
-                <DetailedBullet
-                  title="Digital Systems"
-                  description="Logic gates, CPU architecture, assembly, context switching, IO"
-                />
-                <DetailedBullet
-                  title="Machine Learning"
-                  description="Regression, classification, (convolutional) neural networks, SVMs"
-                />
-                <DetailedBullet
-                  title="Computer Security"
-                  description="Hashing, (a)symmetric encryption, digital signatures, authentication, attacks"
-                />
-                <DetailedBullet
-                  title="Databases"
-                  description="SQL, B+ trees, transactions, parallelisation, ACID properties, indexing"
-                />
-                <DetailedBullet
-                  title="Compilers"
-                  description="Lexical analysis, parsing, semantic analysis, code generation, optimization, context-free grammars"
-                />
-                <DetailedBullet
-                  title="Computer Graphics"
-                  description="Rendering pipeline, transformations, shaders, ray tracing, texturing"
-                />
-                <DetailedBullet
-                  title="Concurrency"
-                  description="Synchronisation, deadlocks, livelocks, semaphores, monitors"
-                />
-              </ul>
-            </div>
+            <CourseHighlights />
 
             {/* Skills - Languages and Tools side by side */}
             <div>
@@ -136,7 +94,7 @@ export default function Home() {
               githubUrl="https://github.com/actuallyatiger/discord-beat-bot"
             />
             <Card
-              title="Rebar VSC"
+              title="Rebar VCS"
               description="Git-like version control in Rust with updated hashing algorithms and compression optimisations."
               technologies={["Rust"]}
               githubUrl="https://github.com/actuallyatiger/rebar"
@@ -176,7 +134,7 @@ export default function Home() {
                   </div>
                   <h3 className="font-semibold text-gray-800">Email</h3>
                   <a
-                    href="mailto:contact@example.com"
+                    href="mailto:tiger@tigertaylor.xyz"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 text-sm"
@@ -191,7 +149,7 @@ export default function Home() {
                   </div>
                   <h3 className="font-semibold text-gray-800">Phone</h3>
                   <a
-                    href="tel:+447123456789"
+                    href="tel:+447496588340"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 text-sm"
