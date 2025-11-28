@@ -28,7 +28,7 @@ export default function Home() {
           <div className="bg-white p-8 rounded-xl shadow-md">
             <p className="text-gray-700 leading-relaxed mb-6">
               I&apos;m a Computer Science undergraduate at the University of Oxford with a passion for low-level
-              systems, full-stack development, and networks.
+              systems, full-stack development, and networks. I've also taken a keen interest in developer tooling.
             </p>
 
             {/* Course Modules - Full width, 2 columns on all screens */}
@@ -50,6 +50,10 @@ export default function Home() {
                   description="Logic gates, CPU architecture, assembly, context switching, IO"
                 />
                 <DetailedBullet
+                  title="Machine Learning"
+                  description="Regression, classification, (convolutional) neural networks, SVMs"
+                />
+                <DetailedBullet
                   title="Computer Security"
                   description="Hashing, (a)symmetric encryption, digital signatures, authentication, attacks"
                 />
@@ -62,8 +66,12 @@ export default function Home() {
                   description="Lexical analysis, parsing, semantic analysis, code generation, optimization, context-free grammars"
                 />
                 <DetailedBullet
-                  title="Algorithms & Data Structures"
-                  description="Amortised analysis, binary search trees, graphs, linear programming, NP-completeness"
+                  title="Computer Graphics"
+                  description="Rendering pipeline, transformations, shaders, ray tracing, texturing"
+                />
+                <DetailedBullet
+                  title="Concurrency"
+                  description="Synchronisation, deadlocks, livelocks, semaphores, monitors"
                 />
               </ul>
             </div>
@@ -92,7 +100,11 @@ export default function Home() {
                     <Item name="Git" />
                     <Item name="Docker" />
                     <Item name="Flask" />
+                    <Item name="FastAPI" />
                     <Item name="Next.js" />
+                    <Item name="Svelte" />
+                    <Item name="PostgreSQL" />
+                    <Item name="Google Cloud" />
                   </div>
                 </div>
               </div>
@@ -124,11 +136,18 @@ export default function Home() {
               githubUrl="https://github.com/actuallyatiger/discord-beat-bot"
             />
             <Card
+              title="Rebar VSC"
+              description="Git-like version control in Rust with updated hashing algorithms and compression optimisations."
+              technologies={["Rust"]}
+              githubUrl="https://github.com/actuallyatiger/rebar"
+              isWIP
+            />
+            {/* <Card
               title="Frost Compiler"
               description="(WIP) Statically typed, compiled language with Rust-style syntax and functional programming-inspired features.\nIncludes a custom DFA lexer and LR(1) parser."
               technologies={["Rust", "LLVM"]}
               githubUrl="https://github.com/actuallyatiger/frost"
-            />
+            /> */}
           </div>
         </div>
       </section>

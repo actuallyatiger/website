@@ -9,12 +9,18 @@ interface CardProps {
   technologies: string[];
   githubUrl?: string;
   projectUrl?: string;
+  isWIP?: boolean;
 }
 
-export function Card({ title, description, technologies, githubUrl, projectUrl }: CardProps) {
+export function Card({ title, description, technologies, githubUrl, projectUrl, isWIP }: CardProps) {
   return (
     <div className="group bg-white border border-gray-200 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-21.333px)] max-w-sm flex flex-col">
       <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-5 text-white relative">
+        {isWIP && (
+          <div className="absolute top-3 right-3 bg-white/20 text-white border border-white/30 text-xs font-bold px-2 py-1 rounded-full z-20 shadow-sm">
+            WIP
+          </div>
+        )}
         <div className="absolute top-0 right-0 w-20 h-20 bg-white opacity-10 rounded-full -mr-10 -mt-10"></div>
         <h3 className="text-2xl font-bold relative z-10">{title}</h3>
       </div>
